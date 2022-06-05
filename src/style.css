@@ -1,0 +1,13 @@
+.katex {
+  font-size: 21px !important;
+}
+
+.katex-equations-btns {
+  margin-top: 10px;
+  margin-left: 8px;
+  display: flex;
+}
+
+.katex-equations-btns > button {
+  margin: 0 !important;
+}

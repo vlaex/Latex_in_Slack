@@ -1,0 +1,21 @@
+{
+  "author": "andrewss <andrewss.krlv@gmail.com>",
+  "name": "Latex in Slack",
+  "description": "Renders LaTeX equations in Slack",
+  "manifest_version": 3,
+  "action": {
+    "default_icon": "icon.png"
+  },
+  "icons": {
+    "128": "icon.png"
+  },
+  "content_scripts": [{
+    "run_at": "document_end",
+    "matches": ["*://app.slack.com/*"],
+    "css": [
+      "katex/katex.min.css",
+      "style.css"
+    ],
+    "js": ["index.js"]
+  }]
+}

@@ -1,0 +1,33 @@
+{
+  "name": "latex_in_slack",
+  "version": "1.3.0",
+  "description": "A Chrome extension for rendering LaTeX math formulas in Slack",
+  "scripts": {
+    "watch": "webpack watch --mode=development",
+    "dist": "webpack --mode=production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vlaex/Latex_in_Slack.git"
+  },
+  "keywords": [
+    "slack",
+    "latex"
+  ],
+  "author": "andrewss <andrewss.krlv@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vlaex/Latex_in_Slack/issues"
+  },
+  "homepage": "https://github.com/vlaex/Latex_in_Slack#readme",
+  "devDependencies": {
+    "@types/katex": "^0.14.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "terser-webpack-plugin": "^5.3.3",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.9.2"
+  },
+  "dependencies": {
+    "katex": "^0.15.6"
+  }
+}
