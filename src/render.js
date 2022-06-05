@@ -1,5 +1,5 @@
-// import renderMathInElement from "katex/contrib/auto-render";
-import replaceTextWithLatex from "./replaceTextWithLatex";
+import renderMathInElement from "katex/contrib/auto-render";
+// import replaceTextWithLatex from "./replaceTextWithLatex";
 
 setInterval(_ => {
   const items = document.querySelectorAll(".c-virtual_list__item");
@@ -8,11 +8,15 @@ setInterval(_ => {
   for (let item of items) {
     if (item.dataset.latexChecked) continue;
 
-    const sections = item.querySelectorAll(".p-rich_text_section");
-
-    for (let section of sections) {
-      section.innerHTML = replaceTextWithLatex(section.innerHTML);
-    }
+    renderMathInElement(item, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "\\[", right: "\\]", display: true}
+      ],
+      throwOnError: false
+    });
 
     item.dataset.latexChecked = "true";
   }

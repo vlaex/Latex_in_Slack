@@ -10,9 +10,7 @@ export default (text) => {
         .replace(/ +/g, " ")
         .replace(/&amp;/g, "&");
 
-      return katex.renderToString(_latex, {
-        throwOnError: false
-      });
+      return katex.render(_latex, { throwOnError: false });
     })
     .replaceAll("\n", "<br>");
 };
